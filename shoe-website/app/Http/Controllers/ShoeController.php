@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 
@@ -39,31 +37,27 @@ class ShoeController extends Controller
     {
         return view('sale', [
             'title' => 'Sale Shoes',
-            'shoes' => $this->shoes->filter(fn($shoe) => $shoe['sale'] === true)
-        ]);
+            'shoes' => $this->shoes->where('sale', true)]);
     }
 
     public function shoes()
     {
         return view('shoes', [
             'title' => 'All Shoes',
-            'shoes' => $this->shoes
-        ]);
+            'shoes' => $this->shoes]);
     }
 
     public function sneakers()
     {
         return view('sneakers', [
-            'title' => 'Sneakers Collection',
-            'shoes' => $this->shoes->filter(fn($shoe) => $shoe['type'] === 'Sneakers')
-        ]);
+            'title' => 'Sneakers',
+            'shoes' => $this->shoes->where('type', 'Sneakers')]);
     }
 
     public function boots()
     {
         return view('boots', [
-            'title' => 'Boots Collection',
-            'shoes' => $this->shoes->filter(fn($shoe) => $shoe['type'] === 'Boots')
-        ]);
+            'title' => 'Boots',
+            'shoes' => $this->shoes->where('type', 'Boots')]);
     }
 }

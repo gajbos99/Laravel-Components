@@ -1,3 +1,3 @@
-<x-layout :title="$title">
-    <x-shoe-list :title="$title" :shoes="$shoes" />
+<x-layout title="Shoes">
+    <x-shoe-list :shoes="$shoes" />
 </x-layout>
