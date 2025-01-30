@@ -35,28 +35,28 @@ class ShoeController extends Controller
     }
     public function sale()
     {
-        return view('sale', [
+        return view('index', [
             'title' => 'Sale Shoes',
             'shoes' => $this->shoes->where('sale', true)]);
     }
 
     public function shoes()
     {
-        return view('shoes', [
+        return view('index', [
             'title' => 'All Shoes',
             'shoes' => $this->shoes]);
     }
 
     public function sneakers()
     {
-        return view('sneakers', [
+        return view('index', [
             'title' => 'Sneakers',
             'shoes' => $this->shoes->where('type', 'Sneakers')]);
     }
 
     public function boots()
     {
-        return view('boots', [
+        return view('index', [
             'title' => 'Boots',
             'shoes' => $this->shoes->where('type', 'Boots')]);
     }

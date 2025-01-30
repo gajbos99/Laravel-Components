@@ -1,4 +1,3 @@
-
 <li class="p-4 bg-white rounded-md shadow-sm flex justify-between items-center">
     <div>
         <h3 class="text-lg font-semibold">{{ $shoe['name'] }}</h3>

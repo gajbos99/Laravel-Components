@@ -8,11 +8,13 @@ use Illuminate\View\Component;
 
 class ShoeList extends Component
 {
+    public $shoes;
+    public $title;
     
-    
-    public function __construct()
+    public function __construct($title, $shoes)
     {
-        //
+        $this->title = $title;
+        $this->shoes = $shoes;
     }
 
     /**

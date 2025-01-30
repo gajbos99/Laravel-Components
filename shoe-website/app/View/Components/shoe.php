@@ -8,12 +8,11 @@ use Illuminate\View\Component;
 
 class shoe extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $shoe;
+    
+    public function __construct($shoe)
     {
-        //
+        $this->shoe = $shoe;
     }
 
     /**
